@@ -5,8 +5,12 @@ Inherits=hicolor
 
 Example=folder
 
-Directories=scalable/actions, scalable/applications, scalable/categories, scalable/devices, scalable/emblems, scalable/emotes, scalable/international, scalable/mimetypes, scalable/places, scalable/status
+Directories=22x22/devices,scalable/actions,scalable/applications,scalable/categories,scalable/devices,scalable/emblems,scalable/emotes,scalable/international,scalable/mimetypes,scalable/places,scalable/status
 
+[22x22/devices]
+Size=22
+Context=Devices
+Type=Fixed
 
 [scalable/actions]
 Size=48
