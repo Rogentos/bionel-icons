@@ -1,0 +1,16 @@
+#! /bin/bash
+
+ICONS_PATH="/path/to/material-design-blah" # <<< edit here
+OLD_COLOR="#HEX_COLOR_FROM" # <<< edit here
+NEW_COLOR="#HEX_COLOR_TO" # # <<< edit here
+
+echo $ICONS_PATH
+echo "Changing Fill color: ${OLD_COLOR} to ${NEW_COLOR}"
+
+for i in $(find ${ICONS_PATH} | grep svg)
+do
+  echo "Found File ${i}"
+  sed -i \
+  -e "s:fill=\"${OLD_COLOR}\":fill=\"${NEW_COLOR}\":g" \
+  -e "s:fill\:${OLD_COLOR}:fill\:${NEW_COLOR}:g" ${i}
+done
