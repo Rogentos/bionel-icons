@@ -5,10 +5,10 @@
 <g>
 	<path id="XMLID_31_" fill="none" d="M0,0h48v48H0V0z"/>
 	<g>
-		<rect id="XMLID_30_" fill="#F8F8F8" x="8" y="20" width="24" height="4"/>
-		<rect id="XMLID_29_" fill="#F8F8F8" x="8" y="12" width="24" height="4"/>
-		<rect id="XMLID_28_" fill="#F8F8F8" x="8" y="28" width="16" height="4"/>
-		<polygon id="XMLID_27_" fill="#F8F8F8" points="28,28 28,40 38,34 		"/>
+		<rect id="XMLID_30_" fill="#f2f2f2" x="8" y="20" width="24" height="4"/>
+		<rect id="XMLID_29_" fill="#f2f2f2" x="8" y="12" width="24" height="4"/>
+		<rect id="XMLID_28_" fill="#f2f2f2" x="8" y="28" width="16" height="4"/>
+		<polygon id="XMLID_27_" fill="#f2f2f2" points="28,28 28,40 38,34 		"/>
 	</g>
 </g>
 </svg>
