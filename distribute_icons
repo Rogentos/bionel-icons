@@ -1,0 +1,34 @@
+#! /bin/bash
+COLOR_NAMES=(light dark blue darkred darkyellow)
+COLOR_VALUES=("#000000" "#f2f2f2" "#157dec" "#520a0a" "#a87f19")
+
+SRC_PATH="./new_icons"
+SRC_COLOR="#f2f2f2"
+
+TARGET_BASE="./new_icons_target/material-icons"
+TARGET_THEME="material-design"
+TARGET_CATEGORY="scalable/applications"
+
+
+for color in ${!COLOR_NAMES[*]}
+do 
+	for i in $(find ${SRC_PATH} | grep svg)
+	do
+		TARGET_FOLDER="${TARGET_BASE}/${TARGET_THEME}-${COLOR_NAMES[color]}/${TARGET_CATEGORY}"
+		TARGET_FILE=$(basename ${i})
+		echo "Found File ${i}"
+		[[ ! -e "${TARGET_FOLDER}/${TARGET_FILE}" ]] && \
+		{
+		[[ -d "${TARGET_FOLDER}" ]] || mkdir -p "${TARGET_FOLDER}"
+		echo "copy new ${i} icon file in ${TARGET_FOLDER}"
+		cp -n ${i} ${TARGET_FOLDER}
+
+		} || echo "file already exist, skip copy .."
+	echo "changing the color in ${TARGET_FOLDER}/${TARGET_FILE}"
+	echo "from to ${SRC_COLOR} to ${COLOR_VALUES[color]}"
+	sed -i \
+	-e "s:fill=\"${SRC_COLOR}\":fill=\"${COLOR_VALUES[color]}\":g" \
+	-e "s:fill\:${SRC_COLOR}:fill\:${COLOR_VALUES[color]}:g" \
+	${TARGET_FOLDER}/${TARGET_FILE}
+	done
+done
