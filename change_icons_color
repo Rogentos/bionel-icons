@@ -1,8 +1,8 @@
 #! /bin/bash
 
-ICONS_PATH="/path/to/material-design-blah" # <<< edit here
-OLD_COLOR="#HEX_COLOR_FROM" # <<< edit here
-NEW_COLOR="#HEX_COLOR_TO" # # <<< edit here
+ICONS_PATH="${ICONS_PATH:-/path/to/material-design-blah}" # <<< edit here
+OLD_COLOR="${OLD_COLOR:-#HEX_COLOR_FROM}" # <<< edit here
+NEW_COLOR="${NEW_COLOR:-#HEX_COLOR_TO}" # # <<< edit here
 
 echo $ICONS_PATH
 echo "Changing Fill color: ${OLD_COLOR} to ${NEW_COLOR}"

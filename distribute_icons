@@ -2,12 +2,12 @@
 COLOR_NAMES=(light dark blue darkred darkyellow)
 COLOR_VALUES=("#000000" "#f2f2f2" "#157dec" "#520a0a" "#a87f19")
 
-SRC_PATH="./new_icons"
-SRC_COLOR="#f2f2f2"
+SRC_PATH="${SRC_PATH:-./new_icons}"
+SRC_COLOR="${SRC_COLOR:-#f2f2f2}"
 
-TARGET_BASE="./new_icons_target/material-icons"
-TARGET_THEME="material-design"
-TARGET_CATEGORY="scalable/applications"
+TARGET_BASE="${TARGET_BASE:-./new_icons_target/material-icons}"
+TARGET_THEME="${TARGET_THEME:-material-design}"
+TARGET_CATEGORY="${TARGET_CATEGORY:-scalable/applications}"
 
 
 for color in ${!COLOR_NAMES[*]}
